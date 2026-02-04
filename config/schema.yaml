@@ -212,6 +212,16 @@ bamqc_additional_options:
   allow_empty: true
   default: ''
   help: 'Additional arguments for bamqc command'
+apptainer_library:
+  type: 'Path'
+  mode: 'r'
+  required: false
+  help: 'Absolute path to Apptainer library directory'
+apptainer_cache:
+  type: 'Path'
+  mode: 'w'
+  required: false
+  help: 'Absolute path to Apptainer cache directory'
 base_resource_update:
   type: 'ResourceUpdateNamespace'
   required: false
