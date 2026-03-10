@@ -1,6 +1,6 @@
 # generate-SQC-BAM
 
-[![GitHub release](https://img.shields.io/github/v/release/uclahs-cds/pipeline-generate-SQC-BAM)](https://github.com/uclahs-cds/pipeline-generate-SQC-BAM/actions/workflows/prepare-release.yaml)
+[![GitHub release](https://img.shields.io/github/v/release/theboutroslab/pipeline-generate-SQC-BAM)](https://github.com/theboutroslab/pipeline-generate-SQC-BAM/actions/workflows/prepare-release.yaml)
 
   1. [Overview](#overview)
   2. [How To Run](#how-to-run)
@@ -25,7 +25,7 @@ For DNA panels/targeted sequencing, intervals may be provided and will be used w
 
 2. Update the input YAML ([Template YAMLs](input/)).
 
-3. See the submission script, [here](https://github.com/uclahs-cds/tool-submit-nf), to submit your pipeline
+3. See the submission script, [here](https://github.com/theboutroslab/tool-submit-nf), to submit your pipeline
 
 ### Requirements
 Currently supported Nextflow versions: `v23.04.2`
@@ -231,15 +231,15 @@ base_resource_update {
 
 ## Discussions
 
-- [Issue Tracker](https://github.com/uclahs-cds/pipeline-generate-SQC-BAM/issues) to report errors and enhancement ideas.
-- Discussions can take place in [generate-SQC-BAM Discussions](https://github.com/uclahs-cds/pipeline-generate-SQC-BAM/discussions)
-- [generate-SQC-BAM Pull Requests](https://github.com/uclahs-cds/pipeline-generate-SQC-BAM/pulls) are also open for discussion
+- [Issue Tracker](https://github.com/theboutroslab/pipeline-generate-SQC-BAM/issues) to report errors and enhancement ideas.
+- Discussions can take place in [generate-SQC-BAM Discussions](https://github.com/theboutroslab/pipeline-generate-SQC-BAM/discussions)
+- [generate-SQC-BAM Pull Requests](https://github.com/theboutroslab/pipeline-generate-SQC-BAM/pulls) are also open for discussion
 
 ---
 
 ## Contributors
 
-Please see list of [Contributors](https://github.com/uclahs-cds/pipeline-generate-SQC-BAM/graphs/contributors) at GitHub.
+Please see list of [Contributors](https://github.com/theboutroslab/pipeline-generate-SQC-BAM/graphs/contributors) at GitHub.
 
 ---
 
