@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.2.0] - 2026-04-28
 
 ### Added
 
@@ -81,6 +81,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Use `sanitize_uclahs_cds_id` from `pipeline-Nextflow-config`
 - Update SAMtools 1.16.1 -> 1.18
 
-[1.0.0]: https://github.com/uclahs-cds/pipeline-generate-SQC-BAM/compare/v1.0.0-rc.1...v1.0.0
-[1.0.0-rc.1]: https://github.com/uclahs-cds/pipeline-generate-SQC-BAM/releases/tag/v1.0.0-rc.1
-[1.1.0]: https://github.com/uclahs-cds/pipeline-generate-SQC-BAM/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/TheBoutrosLab/pipeline-generate-SQC-BAM/compare/v1.0.0-rc.1...v1.0.0
+[1.0.0-rc.1]: https://github.com/TheBoutrosLab/pipeline-generate-SQC-BAM/releases/tag/v1.0.0-rc.1
+[1.1.0]: https://github.com/TheBoutrosLab/pipeline-generate-SQC-BAM/compare/v1.0.0...v1.1.0
+[1.2.0]: https://github.com/TheBoutrosLab/pipeline-generate-SQC-BAM/compare/v1.1.0...v1.2.0
