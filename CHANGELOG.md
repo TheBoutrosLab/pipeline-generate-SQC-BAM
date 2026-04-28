@@ -17,7 +17,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Use `TheBoutrosLab` submodules
 - Update SAMtools `v1.20` to `v1.23`
 - Update Picard `v3.1.0` to `v3.4.0`
-- Update mosdepth `v0.3.8` to `0.3.13`
+- Update mosdepth `v0.3.8` to `v0.3.13`
 - Generalize resource allocations
 
 ## [1.1.0] - 2025-05-01
