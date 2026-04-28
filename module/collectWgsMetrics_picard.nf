@@ -40,7 +40,7 @@ process run_CollectWgsMetrics_Picard {
     set -euo pipefail
     java -Xmx${(task.memory * params.jvm_fraction).getMega()}M \
         -Dpicard.useLegacyParser=false \
-        -jar /usr/local/share/picard-slim-${params.picard_version}-0/picard.jar \
+        -jar /opt/conda/envs/picard/share/picard-slim-${params.picard_version}-0/picard.jar \
         CollectWgsMetrics \
         -INPUT ${bam} \
         ${read_length_arg} \

@@ -1,0 +1,1788 @@
+{
+    "f2": {
+        "run_validate_PipeVal": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "256 MB",
+                "fraction": 0.07,
+                "max": "256 MB"
+            }
+        },
+        "assess_ReadQualityReadgroups_FastQC": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1.5 GB",
+                "fraction": 0.39,
+                "max": "1.5 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "assess_ReadQualityLibraries_FastQC": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1.5 GB",
+                "fraction": 0.39,
+                "max": "1.5 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "assess_ReadQualitySamples_FastQC": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1.5 GB",
+                "fraction": 0.39,
+                "max": "1.5 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "assess_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1.5 GB",
+                "fraction": 0.39,
+                "max": "1.5 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "quantize_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1.5 GB",
+                "fraction": 0.39,
+                "max": "1.5 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "run_statsReadgroups_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1.5 GB",
+                "fraction": 0.39,
+                "max": "1.5 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "run_statsLibraries_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1.5 GB",
+                "fraction": 0.39,
+                "max": "1.5 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "run_statsSamples_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1.5 GB",
+                "fraction": 0.39,
+                "max": "1.5 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "run_CollectWgsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1.5 GB",
+                "fraction": 0.39,
+                "max": "1.5 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "run_BedToIntervalList_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.26,
+                "max": "1 GB"
+            }
+        },
+        "run_CollectHsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.5,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.26,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "1 GB"
+                }
+            }
+        },
+        "run_bamqc_Qualimap": {
+            "cpus": {
+                "min": 2,
+                "fraction": 1.0,
+                "max": 2
+            },
+            "memory": {
+                "min": "4 GB",
+                "fraction": 1.05,
+                "max": "4 GB"
+            }
+        }
+    },
+    "f4": {
+        "run_validate_PipeVal": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "256 MB",
+                "fraction": 0.03,
+                "max": "256 MB"
+            }
+        },
+        "assess_ReadQualityReadgroups_FastQC": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.13,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualityLibraries_FastQC": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.13,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualitySamples_FastQC": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.13,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "7 GB",
+                "fraction": 0.92,
+                "max": "7 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "3 GB"
+                }
+            }
+        },
+        "quantize_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 1.05,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "run_statsReadgroups_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.13,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "3 GB"
+                }
+            }
+        },
+        "run_statsLibraries_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.13,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "3 GB"
+                }
+            }
+        },
+        "run_statsSamples_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.13,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "3 GB"
+                }
+            }
+        },
+        "run_CollectWgsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "2 GB",
+                "fraction": 0.26,
+                "max": "2 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "3 GB"
+                }
+            }
+        },
+        "run_BedToIntervalList_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.13,
+                "max": "1 GB"
+            }
+        },
+        "run_CollectHsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.25,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.13,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "1 GB"
+                }
+            }
+        },
+        "run_bamqc_Qualimap": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.5,
+                "max": 2
+            },
+            "memory": {
+                "min": "4 GB",
+                "fraction": 0.53,
+                "max": "4 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        }
+    },
+    "f8": {
+        "run_validate_PipeVal": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.13,
+                "max": 1
+            },
+            "memory": {
+                "min": "256 MB",
+                "fraction": 0.02,
+                "max": "256 MB"
+            }
+        },
+        "assess_ReadQualityReadgroups_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.25,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.07,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualityLibraries_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.25,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.07,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualitySamples_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.25,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.07,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.13,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.53,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "quantize_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.13,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.53,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "2 GB"
+                }
+            }
+        },
+        "run_statsReadgroups_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.13,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.07,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsLibraries_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.13,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.07,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsSamples_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.13,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.07,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_CollectWgsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.13,
+                "max": 1
+            },
+            "memory": {
+                "min": "2 GB",
+                "fraction": 0.13,
+                "max": "2 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_BedToIntervalList_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.13,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.07,
+                "max": "1 GB"
+            }
+        },
+        "run_CollectHsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.13,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.07,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "1 GB"
+                }
+            }
+        },
+        "run_bamqc_Qualimap": {
+            "cpus": {
+                "min": 4,
+                "fraction": 0.5,
+                "max": 4
+            },
+            "memory": {
+                "min": "9 GB",
+                "fraction": 0.59,
+                "max": "9 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "7 GB"
+                }
+            }
+        }
+    },
+    "f16": {
+        "run_validate_PipeVal": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.06,
+                "max": 1
+            },
+            "memory": {
+                "min": "256 MB",
+                "fraction": 0.01,
+                "max": "256 MB"
+            }
+        },
+        "assess_ReadQualityReadgroups_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.13,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.03,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualityLibraries_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.13,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.03,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualitySamples_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.13,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.03,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.06,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.26,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "quantize_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.06,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.26,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsReadgroups_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.06,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.03,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsLibraries_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.06,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.03,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsSamples_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.06,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.03,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_CollectWgsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.06,
+                "max": 1
+            },
+            "memory": {
+                "min": "2 GB",
+                "fraction": 0.07,
+                "max": "2 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_BedToIntervalList_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.06,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.03,
+                "max": "1 GB"
+            }
+        },
+        "run_CollectHsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.06,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.03,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "1 GB"
+                }
+            }
+        },
+        "run_bamqc_Qualimap": {
+            "cpus": {
+                "min": 4,
+                "fraction": 0.25,
+                "max": 4
+            },
+            "memory": {
+                "min": "24 GB",
+                "fraction": 0.79,
+                "max": "24 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "8 GB"
+                }
+            }
+        }
+    },
+    "f32": {
+        "run_validate_PipeVal": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.03,
+                "max": 1
+            },
+            "memory": {
+                "min": "256 MB",
+                "fraction": 0.00,
+                "max": "256 MB"
+            }
+        },
+        "assess_ReadQualityReadgroups_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.06,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.02,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualityLibraries_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.06,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.02,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualitySamples_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.06,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.02,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.03,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.13,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "quantize_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.03,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.13,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsReadgroups_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.03,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.02,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsLibraries_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.03,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.02,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsSamples_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.03,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.02,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_CollectWgsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.03,
+                "max": 1
+            },
+            "memory": {
+                "min": "2 GB",
+                "fraction": 0.03,
+                "max": "2 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_BedToIntervalList_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.03,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.02,
+                "max": "1 GB"
+            }
+        },
+        "run_CollectHsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.03,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.02,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "1 GB"
+                }
+            }
+        },
+        "run_bamqc_Qualimap": {
+            "cpus": {
+                "min": 4,
+                "fraction": 0.13,
+                "max": 4
+            },
+            "memory": {
+                "min": "46 GB",
+                "fraction": 0.76,
+                "max": "46 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "18 GB"
+                }
+            }
+        }
+    },
+    "f72": {
+        "run_validate_PipeVal": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 1
+            },
+            "memory": {
+                "min": "256 MB",
+                "fraction": 0.00,
+                "max": "256 MB"
+            }
+        },
+        "assess_ReadQualityReadgroups_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.03,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualityLibraries_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.03,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualitySamples_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.03,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.06,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "quantize_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.06,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "8 GB"
+                }
+            }
+        },
+        "run_statsReadgroups_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsLibraries_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsSamples_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_CollectWgsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 1
+            },
+            "memory": {
+                "min": "2 GB",
+                "fraction": 0.01,
+                "max": "2 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_BedToIntervalList_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "1 GB"
+            }
+        },
+        "run_CollectHsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "1 GB"
+                }
+            }
+        },
+        "run_bamqc_Qualimap": {
+            "cpus": {
+                "min": 4,
+                "fraction": 0.06,
+                "max": 4
+            },
+            "memory": {
+                "min": "56 GB",
+                "fraction": 0.41,
+                "max": "56 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "24 GB"
+                }
+            }
+        }
+    },
+    "m64": {
+        "run_validate_PipeVal": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.02,
+                "max": 1
+            },
+            "memory": {
+                "min": "250 MB",
+                "fraction": 0.00,
+                "max": "250 MB"
+            }
+        },
+        "assess_ReadQualityReadgroups_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.03,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.00,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualityLibraries_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.03,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.00,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualitySamples_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.03,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.00,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.02,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.01,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "quantize_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.02,
+                "max": 1
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.01,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "8 GB"
+                }
+            }
+        },
+        "run_statsReadgroups_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.02,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.00,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsLibraries_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.02,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.00,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsSamples_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.02,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.00,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_CollectWgsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.02,
+                "max": 1
+            },
+            "memory": {
+                "min": "4 GB",
+                "fraction": 0.00,
+                "max": "4 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_BedToIntervalList_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.02,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.00,
+                "max": "1 GB"
+            }
+        },
+        "run_CollectHsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.02,
+                "max": 1
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.00,
+                "max": "1 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "1 GB"
+                }
+            }
+        },
+        "run_bamqc_Qualimap": {
+            "cpus": {
+                "min": 16,
+                "fraction": 0.25,
+                "max": 16
+            },
+            "memory": {
+                "min": "38 GB",
+                "fraction": 0.04,
+                "max": "38 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "24 GB"
+                }
+            }
+        }
+    },
+    "default": {
+        "run_validate_PipeVal": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 1
+            },
+            "memory": {
+                "min": "256 MB",
+                "fraction": 0.01,
+                "max": "2 GB"
+            }
+        },
+        "assess_ReadQualityReadgroups_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.03,
+                "max": 6
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "4 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualityLibraries_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.03,
+                "max": 6
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "4 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_ReadQualitySamples_FastQC": {
+            "cpus": {
+                "min": 2,
+                "fraction": 0.03,
+                "max": 6
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "4 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "assess_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 4
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.06,
+                "max": "16 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "quantize_coverage_mosdepth": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 4
+            },
+            "memory": {
+                "min": "8 GB",
+                "fraction": 0.06,
+                "max": "16 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "8 GB"
+                }
+            }
+        },
+        "run_statsReadgroups_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 4
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "4 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsLibraries_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 4
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "4 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_statsSamples_SAMtools": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 4
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "4 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_CollectWgsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 4
+            },
+            "memory": {
+                "min": "2 GB",
+                "fraction": 0.01,
+                "max": "8 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "4 GB"
+                }
+            }
+        },
+        "run_BedToIntervalList_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "4 GB"
+            }
+        },
+        "run_CollectHsMetrics_Picard": {
+            "cpus": {
+                "min": 1,
+                "fraction": 0.01,
+                "max": 2
+            },
+            "memory": {
+                "min": "1 GB",
+                "fraction": 0.01,
+                "max": "4 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "1 GB"
+                }
+            }
+        },
+        "run_bamqc_Qualimap": {
+            "cpus": {
+                "min": 4,
+                "fraction": 0.06,
+                "max": 16
+            },
+            "memory": {
+                "min": "56 GB",
+                "fraction": 0.41,
+                "max": "84 GB"
+            },
+            "retry_strategy": {
+                "memory": {
+                    "strategy": "add",
+                    "operand": "24 GB"
+                }
+            }
+        }
+    }
+}

@@ -30,7 +30,7 @@ process run_BedToIntervalList_Picard {
     set -euo pipefail
 
     java \"-Xmx${(task.memory * params.jvm_fraction).getMega()}M\" \
-    -jar /usr/local/share/picard-slim-${params.picard_version}-0/picard.jar \
+    -jar /opt/conda/envs/picard/share/picard-slim-${params.picard_version}-0/picard.jar \
         BedToIntervalList \
         --INPUT ${bed} \
         --OUTPUT ${interval_list} \
