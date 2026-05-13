@@ -2,71 +2,29 @@
 nextflow.enable.dsl=2
 include { run_validate_PipeVal } from './external/pipeline-Nextflow-module/modules/PipeVal/validate/main.nf'
 
-include { run_stats_SAMtools as run_statsReadgroups_SAMtools } from './module/stats_samtools' addParams(
-    workflow_output_dir: "${params.output_dir_base}/SAMtools-${params.samtools_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/SAMtools-${params.samtools_version}",
-    stat_mode: "readgroup"
-    )
+include { run_stats_SAMtools as run_statsReadgroups_SAMtools } from './module/stats_samtools'
 
-include { run_stats_SAMtools as run_statsLibraries_SAMtools } from './module/stats_samtools' addParams(
-    workflow_output_dir: "${params.output_dir_base}/SAMtools-${params.samtools_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/SAMtools-${params.samtools_version}",
-    stat_mode: "library"
-    )
+include { run_stats_SAMtools as run_statsLibraries_SAMtools } from './module/stats_samtools'
 
-include { run_stats_SAMtools as run_statsSamples_SAMtools } from './module/stats_samtools' addParams(
-    workflow_output_dir: "${params.output_dir_base}/SAMtools-${params.samtools_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/SAMtools-${params.samtools_version}",
-    stat_mode: "sample"
-    )
+include { run_stats_SAMtools as run_statsSamples_SAMtools } from './module/stats_samtools'
 
-include { assess_ReadQuality_FastQC as assess_ReadQualityReadgroups_FastQC } from './module/fastqc' addParams(
-    workflow_output_dir: "${params.output_dir_base}/FastQC-${params.fastqc_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/FastQC-${params.fastqc_version}",
-    stat_mode: "readgroup"
-    )
+include { assess_ReadQuality_FastQC as assess_ReadQualityReadgroups_FastQC } from './module/fastqc'
 
-include { assess_ReadQuality_FastQC as assess_ReadQualityLibraries_FastQC } from './module/fastqc' addParams(
-    workflow_output_dir: "${params.output_dir_base}/FastQC-${params.fastqc_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/FastQC-${params.fastqc_version}",
-    stat_mode: "library"
-    )
+include { assess_ReadQuality_FastQC as assess_ReadQualityLibraries_FastQC } from './module/fastqc'
 
-include { assess_ReadQuality_FastQC as assess_ReadQualitySamples_FastQC } from './module/fastqc' addParams(
-    workflow_output_dir: "${params.output_dir_base}/FastQC-${params.fastqc_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/FastQC-${params.fastqc_version}",
-    stat_mode: "sample"
-    )
+include { assess_ReadQuality_FastQC as assess_ReadQualitySamples_FastQC } from './module/fastqc'
 
-include { run_CollectWgsMetrics_Picard } from './module/collectWgsMetrics_picard' addParams(
-    workflow_output_dir: "${params.output_dir_base}/Picard-${params.picard_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/Picard-${params.picard_version}"
-    )
+include { run_CollectWgsMetrics_Picard } from './module/collectWgsMetrics_picard'
 
-include { run_BedToIntervalList_Picard } from './module/bedToIntervalList_picard' addParams(
-    workflow_output_dir: "${params.output_dir_base}/Picard-${params.picard_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/Picard-${params.picard_version}"
-    )
+include { run_BedToIntervalList_Picard } from './module/bedToIntervalList_picard'
 
-include { run_CollectHsMetrics_Picard } from './module/collectHsMetrics_picard' addParams(
-    workflow_output_dir: "${params.output_dir_base}/Picard-${params.picard_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/Picard-${params.picard_version}"
-    )
+include { run_CollectHsMetrics_Picard } from './module/collectHsMetrics_picard'
 
-include { run_bamqc_Qualimap } from './module/bamqc_qualimap' addParams(
-    workflow_output_dir: "${params.output_dir_base}/Qualimap-${params.qualimap_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/Qualimap-${params.qualimap_version}"
-    )
+include { run_bamqc_Qualimap } from './module/bamqc_qualimap'
 
-include { assess_coverage_mosdepth } from './module/windows_mosdepth' addParams(
-    workflow_output_dir: "${params.output_dir_base}/mosdepth-${params.mosdepth_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/mosdepth-${params.mosdepth_version}"
-    )
+include { assess_coverage_mosdepth } from './module/windows_mosdepth'
 
-include { quantize_coverage_mosdepth } from './module/quantize_mosdepth' addParams(
-    workflow_output_dir: "${params.output_dir_base}/mosdepth-${params.mosdepth_version}",
-    workflow_log_output_dir: "${params.log_output_dir}/process-log/mosdepth-${params.mosdepth_version}"
-    )
+include { quantize_coverage_mosdepth } from './module/quantize_mosdepth'
 
 include { indexFile } from './external/pipeline-Nextflow-module/modules/common/indexFile/main.nf'
 
@@ -280,6 +238,41 @@ workflow {
         ]
     }
 
+    samtools_meta = meta_base.map{ base_m ->
+        base_m + [
+            "workflow_output_dir": "${base_m.output_dir_base}/SAMtools-${params.samtools_version}",
+            "workflow_log_output_dir": "${base_m.output_dir_base}/process-log/SAMtools-${params.samtools_version}"
+        ]
+    }
+
+    fastqc_meta = meta_base.map{ base_m ->
+        base_m + [
+            "workflow_output_dir": "${base_m.output_dir_base}/FastQC-${params.fastqc_version}",
+            "workflow_log_output_dir": "${base_m.output_dir_base}/process-log/FastQC-${params.fastqc_version}"
+        ]
+    }
+
+    picard_meta = meta_base.map{ base_m ->
+        base_m + [
+            "workflow_output_dir": "${base_m.output_dir_base}/Picard-${params.picard_version}",
+            "workflow_log_output_dir": "${base_m.output_dir_base}/process-log/Picard-${params.picard_version}"
+        ]
+    }
+
+    qualimap_meta = meta_base.map{ base_m ->
+        base_m + [
+            "workflow_output_dir": "${base_m.output_dir_base}/Qualimap-${params.qualimap_version}",
+            "workflow_log_output_dir": "${base_m.output_dir_base}/process-log/Qualimap-${params.qualimap_version}"
+        ]
+    }
+
+    mosdepth_meta = meta_base.map{ base_m ->
+        base_m + [
+            "workflow_output_dir": "${base_m.output_dir_base}/mosdepth-${params.mosdepth_version}",
+            "workflow_log_output_dir": "${base_m.output_dir_base}/process-log/mosdepth-${params.mosdepth_version}"
+        ]
+    }
+
     run_validate_PipeVal(validate_meta.combine(files_to_validate_ch))
     run_validate_PipeVal.out.validation_result.collectFile(
         name: 'input_validation.txt', newLine: true,
@@ -288,45 +281,54 @@ workflow {
 
     if ('samtools_stats' in params.algorithm) {
         run_statsReadgroups_SAMtools(
+            samtools_meta.map{ base_m -> base_m + ["stat_mode": "readgroup"] },
             stats_readgroups_ch
             )
         run_statsLibraries_SAMtools(
+            samtools_meta.map{ base_m -> base_m + ["stat_mode": "library"] },
             stats_libraries_ch
             )
         run_statsSamples_SAMtools(
+            samtools_meta.map{ base_m -> base_m + ["stat_mode": "sample"] },
             samples_to_process_ch
             )
         }
     if ('fastqc' in params.algorithm) {
         if (params.fastqc_level == 'readgroup') {
             assess_ReadQualityReadgroups_FastQC(
+                fastqc_meta.map{ base_m -> base_m + ["stat_mode": "readgroup"] },
                 readgroups_to_process_ch
                 )
             }
         else if (params.fastqc_level == 'library') {
             assess_ReadQualityLibraries_FastQC(
+                fastqc_meta.map{ base_m -> base_m + ["stat_mode": "library"] },
                 libraries_to_process_ch
                 )
             }
         else if (params.fastqc_level == 'sample') {
             assess_ReadQualitySamples_FastQC(
+                fastqc_meta.map{ base_m -> base_m + ["stat_mode": "sample"] },
                 samples_to_process_ch
                 )
             }
         }
     if ('mosdepth_coverage' in params.algorithm) {
         assess_coverage_mosdepth(
+            mosdepth_meta,
             samples_to_process_ch,
             target_bed
             )
         }
     if ('mosdepth_quantize' in params.algorithm) {
         quantize_coverage_mosdepth(
+            mosdepth_meta,
             samples_to_process_ch
             )
         }
     if ('collectwgsmetrics' in params.algorithm) {
         run_CollectWgsMetrics_Picard(
+            picard_meta,
             samples_to_process_ch,
             params.reference,
             params.reference_index
@@ -334,6 +336,7 @@ workflow {
         }
     if ('collecthsmetrics' in params.algorithm) {
         run_BedToIntervalList_Picard(
+            picard_meta,
             bed_to_interval_list_ch
             )
         target_intervals_ch = run_BedToIntervalList_Picard.out.interval_list
@@ -351,6 +354,7 @@ workflow {
                 .map { it[0] }
             }
         run_CollectHsMetrics_Picard(
+            picard_meta,
             samples_to_process_ch,
             target_intervals_ch,
             bait_intervals_ch,
@@ -361,6 +365,7 @@ workflow {
 
     if ('qualimap_bamqc' in params.algorithm) {
         run_bamqc_Qualimap(
+            qualimap_meta,
             samples_to_process_ch,
             target_bed
             )
