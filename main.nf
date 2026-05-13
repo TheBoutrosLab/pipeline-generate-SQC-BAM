@@ -1,11 +1,7 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
-include { run_validate_PipeVal } from './external/pipeline-Nextflow-module/modules/PipeVal/validate/main.nf' addParams(
-    options: [
-        docker_image_version: params.pipeval_version,
-        main_process: "./" //Save logs in <log_dir>/process-log/run_validate_PipeVal
-        ]
-    )
+include { run_validate_PipeVal } from './external/pipeline-Nextflow-module/modules/PipeVal/validate/main.nf'
+
 include { run_stats_SAMtools as run_statsReadgroups_SAMtools } from './module/stats_samtools' addParams(
     workflow_output_dir: "${params.output_dir_base}/SAMtools-${params.samtools_version}",
     workflow_log_output_dir: "${params.log_output_dir}/process-log/SAMtools-${params.samtools_version}",
@@ -273,7 +269,18 @@ if ('collecthsmetrics' in params.algorithm) {
     }
 
 workflow {
-    run_validate_PipeVal(files_to_validate_ch)
+    meta_base = Channel.value([
+        "output_dir_base": params.output_dir_base,
+        "log_output_dir": params.log_output_dir
+    ])
+
+    validate_meta = meta_base.map{ base_m ->
+        base_m + [
+            "docker_image": params.docker_image_validate_params
+        ]
+    }
+
+    run_validate_PipeVal(validate_meta.combine(files_to_validate_ch))
     run_validate_PipeVal.out.validation_result.collectFile(
         name: 'input_validation.txt', newLine: true,
         storeDir: "${params.output_dir_base}/validation"
