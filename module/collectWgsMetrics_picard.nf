@@ -9,7 +9,7 @@ include { generate_standard_filename } from '../external/pipeline-Nextflow-modul
 process run_CollectWgsMetrics_Picard {
     container params.docker_image_picard
 
-    publishDir path: "${params.workflow_output_dir}/output",
+    publishDir path: "${META.workflow_output_dir}/output",
         pattern: "*_wgs-metrics.txt",
         mode: "copy",
         enabled: true
@@ -17,6 +17,7 @@ process run_CollectWgsMetrics_Picard {
     ext log_dir_suffix: { "-${sm_id}" }
 
     input:
+        val(META)
         tuple path(bam), path(bam_index), val(orig_id), val(sm_id), val(rg_arg), val(rg_id), val(lib_id), val(sm_type), val(read_length)
         path reference
         path reference_index
