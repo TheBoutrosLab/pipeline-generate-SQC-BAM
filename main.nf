@@ -241,35 +241,35 @@ workflow {
     samtools_meta = meta_base.map{ base_m ->
         base_m + [
             "workflow_output_dir": "${base_m.output_dir_base}/SAMtools-${params.samtools_version}",
-            "workflow_log_output_dir": "${base_m.output_dir_base}/process-log/SAMtools-${params.samtools_version}"
+            "workflow_log_output_dir": "${base_m.log_output_dir}/process-log/SAMtools-${params.samtools_version}"
         ]
     }
 
     fastqc_meta = meta_base.map{ base_m ->
         base_m + [
             "workflow_output_dir": "${base_m.output_dir_base}/FastQC-${params.fastqc_version}",
-            "workflow_log_output_dir": "${base_m.output_dir_base}/process-log/FastQC-${params.fastqc_version}"
+            "workflow_log_output_dir": "${base_m.log_output_dir}/process-log/FastQC-${params.fastqc_version}"
         ]
     }
 
     picard_meta = meta_base.map{ base_m ->
         base_m + [
             "workflow_output_dir": "${base_m.output_dir_base}/Picard-${params.picard_version}",
-            "workflow_log_output_dir": "${base_m.output_dir_base}/process-log/Picard-${params.picard_version}"
+            "workflow_log_output_dir": "${base_m.log_output_dir}/process-log/Picard-${params.picard_version}"
         ]
     }
 
     qualimap_meta = meta_base.map{ base_m ->
         base_m + [
             "workflow_output_dir": "${base_m.output_dir_base}/Qualimap-${params.qualimap_version}",
-            "workflow_log_output_dir": "${base_m.output_dir_base}/process-log/Qualimap-${params.qualimap_version}"
+            "workflow_log_output_dir": "${base_m.log_output_dir}/process-log/Qualimap-${params.qualimap_version}"
         ]
     }
 
     mosdepth_meta = meta_base.map{ base_m ->
         base_m + [
             "workflow_output_dir": "${base_m.output_dir_base}/mosdepth-${params.mosdepth_version}",
-            "workflow_log_output_dir": "${base_m.output_dir_base}/process-log/mosdepth-${params.mosdepth_version}"
+            "workflow_log_output_dir": "${base_m.log_output_dir}/process-log/mosdepth-${params.mosdepth_version}"
         ]
     }
 
