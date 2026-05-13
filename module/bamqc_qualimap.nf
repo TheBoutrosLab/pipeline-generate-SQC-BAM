@@ -8,7 +8,7 @@ include { generate_standard_filename } from '../external/pipeline-Nextflow-modul
 process run_bamqc_Qualimap {
     container params.docker_image_qualimap
 
-    publishDir path: "${params.workflow_output_dir}/output",
+    publishDir path: "${META.workflow_output_dir}/output",
         pattern: "*_stats",
         mode: "copy",
         enabled: true
@@ -16,6 +16,7 @@ process run_bamqc_Qualimap {
     ext log_dir_suffix: { "-${sm_id}" }
 
     input:
+        val(META)
         tuple path(bam), path(bam_index), val(orig_id), val(sm_id), val(rg_arg), val(rg_id), val(lib_id), val(sm_type), val(read_length)
         path intervals
 

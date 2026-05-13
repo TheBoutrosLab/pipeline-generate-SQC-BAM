@@ -9,7 +9,7 @@ include { generate_standard_filename } from '../external/pipeline-Nextflow-modul
 process run_BedToIntervalList_Picard {
     container params.docker_image_picard
 
-    publishDir path: "${params.workflow_output_dir}/intermediate/${task.process.replace(':','/')}",
+    publishDir path: "${META.workflow_output_dir}/intermediate/${task.process.replace(':','/')}",
         pattern: "*.interval_list",
         mode: "copy",
         enabled: params.save_intermediate_files
@@ -17,6 +17,7 @@ process run_BedToIntervalList_Picard {
     ext log_dir_suffix: { "-${type}" }
 
     input:
+        val(META)
         tuple val(type), path(bed), path(reference_dict)
 
     output:

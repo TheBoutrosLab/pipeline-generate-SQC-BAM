@@ -8,7 +8,7 @@ include { generate_standard_filename } from '../external/pipeline-Nextflow-modul
 process quantize_coverage_mosdepth {
     container params.docker_image_mosdepth
 
-    publishDir path: "${params.workflow_output_dir}/output",
+    publishDir path: "${META.workflow_output_dir}/output",
         pattern: "${output_filename}*",
         mode: "copy",
         enabled: true
@@ -16,6 +16,7 @@ process quantize_coverage_mosdepth {
     ext log_dir_suffix: { "-${sm_id}" }
 
     input:
+        val(META)
         tuple path(bam), path(bam_index), val(orig_id), val(sm_id), val(rg_arg), val(rg_id), val(lib_id), val(sm_type), val(read_length)
 
     output:
