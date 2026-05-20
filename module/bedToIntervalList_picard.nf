@@ -22,7 +22,6 @@ process run_BedToIntervalList_Picard {
 
     output:
         tuple val(type), path(interval_list), emit: interval_list
-        path ".command.*"
 
     script:
     interval_list = "${bed.getBaseName()}.interval_list"

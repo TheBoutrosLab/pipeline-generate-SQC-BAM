@@ -22,7 +22,6 @@ process assess_coverage_mosdepth {
 
     output:
         path "${output_filename}*"
-        path ".command.*"
 
     script:
     def use_windows = ( intervals.getName() == 'NO_TARGET_FILE.bed' )

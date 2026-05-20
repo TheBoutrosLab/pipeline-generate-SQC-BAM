@@ -24,7 +24,6 @@ process run_CollectWgsMetrics_Picard {
 
     output:
         path "*_wgs-metrics.txt"
-        path ".command.*"
 
     script:
     output_filename = generate_standard_filename("Picard-${params.picard_version}",

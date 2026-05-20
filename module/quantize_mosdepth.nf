@@ -21,7 +21,6 @@ process quantize_coverage_mosdepth {
 
     output:
         path "${output_filename}*"
-        path ".command.*"
 
     script:
     output_filename = generate_standard_filename("mosdepth-${params.picard_version}",
