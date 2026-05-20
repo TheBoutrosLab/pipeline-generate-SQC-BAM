@@ -26,7 +26,6 @@ process run_CollectHsMetrics_Picard {
 
     output:
         path "*_hs-metrics.txt"
-        path ".command.*"
 
     script:
     output_filename = generate_standard_filename("Picard-${params.picard_version}",

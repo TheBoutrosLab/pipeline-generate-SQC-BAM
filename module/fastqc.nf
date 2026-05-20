@@ -25,7 +25,6 @@ process assess_ReadQuality_FastQC {
 
     output:
         path "${outdir}/${output_filename}_fastqc"
-        path ".command.*"
 
     script:
 

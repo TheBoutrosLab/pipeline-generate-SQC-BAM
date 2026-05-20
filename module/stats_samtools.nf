@@ -22,7 +22,6 @@ process run_stats_SAMtools {
 
     output:
         path "*stats.txt"
-        path ".command.*"
 
     script:
     if (META.stat_mode == "sample") {

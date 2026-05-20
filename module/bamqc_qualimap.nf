@@ -22,7 +22,6 @@ process run_bamqc_Qualimap {
 
     output:
         path "*_stats", emit: stats
-        path ".command.*"
 
     script:
     def bamqc_args = intervals.getName() != 'NO_TARGET_FILE.bed' ?
