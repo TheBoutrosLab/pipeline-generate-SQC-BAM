@@ -7,10 +7,11 @@
   3. [Flow Diagram](#flow-diagram)
   4. [Pipeline Steps](#pipeline-steps)
   5. [Inputs](#inputs)
-  6. [Outputs](#outputs)
-  7. [Discussions](#discussions)
-  8. [Contributors](#contributors)
-  9. [References](#references)
+  6. [Profiles](#profiles)
+  7. [Outputs](#outputs)
+  8. [Discussions](#discussions)
+  9. [Contributors](#contributors)
+  10. [References](#references)
 ## Overview
 
 This pipeline takes BAMs and runs selected Quality Control (QC) steps. Available algorithms are currently `SAMtools stats`, `Picard CollectWgsMetrics`, `Picard CollectHsMetrics`, `FastQC`, `Qualimap bamqc`, `mosdepth coverage` and `mosdepth quantize`. Generally either `Qualimap bamqc` or `SAMtools stats and Picard CollectWgsMetrics` should be run, not both. `Qualimap bamqc` uses a lot of memory and should not be run within `uclahs-cds/metapipeline-DNA`. Input can include any combination of tumor and normal BAMs from a single donor. Each will be processed independently. RNA specific QC is not yet implemented but is expected soon.
@@ -89,6 +90,10 @@ input:
 | `output_dir` | path | yes | Not required if `blcds_registered_dataset` = `true` |
 | `blcds_registered_dataset` | boolean | no | Default is `false`. Only `uclahs_cds` users should change this. When `true`, BLCDS folder structure is used |
 | `work_dir` | path | no | Path of working directory for Nextflow. When included, Nextflow intermediate files and logs will be saved to this directory. With `uclahs_cds` = `true`, the default is `/scratch` and should only be changed for testing/development. Changing this directory to `/hot` or `/tmp` can lead to high server latency and potential disk space limitations, respectively. |
+| `apptainer_library` | path | no | Path to readable Apptainer library directory containing any existing Apptainer images. |
+| `apptainer_cache` | path | no | Path to writable Apptainer cache directory where images will be cached. |
+| `singularity_library` | path | no | Path to readable Singularity library directory containing any existing Singularity images. |
+| `singularity_cache` | path | no | Path to writable Singularity cache directory where images will be cached. |
 
 #### SAMtools specific configuration
 | Field | Type | Required | Description |
@@ -194,6 +199,16 @@ base_resource_update {
     ]
 }
 ```
+---
+
+## Profiles
+
+Profiles can be selected to control which containerization system will be used. Profile selection can be passed to the Nextflow run command using `-profile`. Available profiles:
+
+- `docker` - Use Docker as the containerization system
+- `apptainer` - Use Apptainer as the containerization system
+- `singularity` - Use Singularity as the containerization system
+
 ---
 
 ## Outputs
