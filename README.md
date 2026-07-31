@@ -264,7 +264,8 @@ Generate-SQC-BAM is licensed under the GNU General Public License version 2. See
 
 Generate-SQC-BAM takes BAM files and generates per sample QC metrics
 
-Copyright (C) 2024 University of California Los Angeles ("Boutros Lab") All rights reserved.
+Copyright (C) 2024-2025 University of California Los Angeles ("Boutros Lab")
+Copyright (C) 2026 Sanford Burnham Prebys Medical Discovery Institute ("Boutros Lab")
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
