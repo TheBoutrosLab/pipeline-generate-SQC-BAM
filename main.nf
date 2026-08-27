@@ -371,4 +371,8 @@ workflow {
             target_bed
             )
         }
+    
+    workflow.onComplete = {
+        WorkflowFinalizer.completeWorkflow(workflow, params);
     }
+}
