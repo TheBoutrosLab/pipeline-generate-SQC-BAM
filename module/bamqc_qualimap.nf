@@ -11,7 +11,8 @@ process run_bamqc_Qualimap {
     publishDir path: "${META.workflow_output_dir}/output",
         pattern: "*_stats",
         mode: "copy",
-        enabled: true
+        enabled: true,
+        failOnError: false
 
     ext log_dir_suffix: { "-${sm_id}" }
 

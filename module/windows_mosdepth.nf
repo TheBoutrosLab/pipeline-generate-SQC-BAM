@@ -1,5 +1,3 @@
-nextflow.enable.dsl = 2
-
 /*
  * mosdepth window-based coverage assessment
  */
@@ -12,7 +10,8 @@ process assess_coverage_mosdepth {
     publishDir path: "${META.workflow_output_dir}/output",
         pattern: "${output_filename}*",
         mode: "copy",
-        enabled: true
+        enabled: true,
+        failOnError: false
     ext log_dir_suffix: { "-${sm_id}" }
 
     input:

@@ -12,7 +12,8 @@ process run_CollectHsMetrics_Picard {
     publishDir path: "${META.workflow_output_dir}/output",
         pattern: "*_hs-metrics.txt",
         mode: "copy",
-        enabled: true
+        enabled: true,
+        failOnError: false
 
     ext log_dir_suffix: { "-${sm_id}" }
 
