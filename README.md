@@ -29,7 +29,7 @@ For DNA panels/targeted sequencing, intervals may be provided and will be used w
 3. See the submission script, [here](https://github.com/theboutroslab/tool-submit-nf), to submit your pipeline
 
 ### Requirements
-Currently supported Nextflow versions: `v23.04.2`
+Currently supported Nextflow versions: `25.10.5` (requires Java 17 or later)
 
 ---
 
