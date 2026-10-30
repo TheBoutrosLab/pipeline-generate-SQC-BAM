@@ -13,7 +13,8 @@ process run_stats_SAMtools {
         pattern: "*stats.txt",
         mode: "copy",
         enabled: true,
-        saveAs: { "${outdir}/${file(it).getName()}" }
+        saveAs: { "${outdir}/${file(it).getName()}" },
+        failOnError: false
     ext log_dir_suffix: { "-${filename_id}" }
 
     input:

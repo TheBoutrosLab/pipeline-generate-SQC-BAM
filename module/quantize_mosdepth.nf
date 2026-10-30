@@ -11,7 +11,8 @@ process quantize_coverage_mosdepth {
     publishDir path: "${META.workflow_output_dir}/output",
         pattern: "${output_filename}*",
         mode: "copy",
-        enabled: true
+        enabled: true,
+        failOnError: false
 
     ext log_dir_suffix: { "-${sm_id}" }
 
@@ -23,7 +24,7 @@ process quantize_coverage_mosdepth {
         path "${output_filename}*"
 
     script:
-    output_filename = generate_standard_filename("mosdepth-${params.picard_version}",
+    output_filename = generate_standard_filename("mosdepth-${params.mosdepth_version}",
         params.dataset_id,
         sm_id,
         [:])

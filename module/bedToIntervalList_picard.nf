@@ -3,7 +3,6 @@
 *   This module runs Picard BedToIntervalList on a BED file
 *
 */
-nextflow.enable.dsl=2
 include { generate_standard_filename } from '../external/pipeline-Nextflow-module/modules/common/generate_standardized_filename/main.nf'
 
 process run_BedToIntervalList_Picard {
@@ -12,7 +11,8 @@ process run_BedToIntervalList_Picard {
     publishDir path: "${META.workflow_output_dir}/intermediate/${task.process.replace(':','/')}",
         pattern: "*.interval_list",
         mode: "copy",
-        enabled: params.save_intermediate_files
+        enabled: params.save_intermediate_files,
+        failOnError: false
 
     ext log_dir_suffix: { "-${type}" }
 

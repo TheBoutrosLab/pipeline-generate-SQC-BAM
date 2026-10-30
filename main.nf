@@ -1,5 +1,4 @@
 #!/usr/bin/env nextflow
-nextflow.enable.dsl=2
 include { run_validate_PipeVal } from './external/pipeline-Nextflow-module/modules/PipeVal/validate/main.nf'
 
 include { run_stats_SAMtools as run_statsReadgroups_SAMtools } from './module/stats_samtools'
@@ -198,7 +197,7 @@ if ('collectwgsmetrics' in params.algorithm || 'collecthsmetrics' in params.algo
         }
     params.reference_index = "${params.reference}.fai"
     Channel
-        .from(
+        .of(
             params.reference,
             params.reference_index,
             )
