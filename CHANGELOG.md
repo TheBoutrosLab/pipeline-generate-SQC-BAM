@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-10-30
+
 ### Changed
 
 - Update to support Nextflow v25.10.5
@@ -131,4 +133,5 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 [1.5.0]: https://github.com/TheBoutrosLab/pipeline-generate-SQC-BAM/compare/v1.4.0...v1.5.0
 [1.5.1]: https://github.com/TheBoutrosLab/pipeline-generate-SQC-BAM/compare/v1.5.0...v1.5.1
 [1.5.2]: https://github.com/TheBoutrosLab/pipeline-generate-SQC-BAM/compare/v1.5.1...v1.5.2
-[unreleased]: https://github.com/TheBoutrosLab/pipeline-generate-SQC-BAM/compare/v1.5.2...HEAD
+[2.0.0]: https://github.com/TheBoutrosLab/pipeline-generate-SQC-BAM/compare/v1.5.2...v2.0.0
+[unreleased]: https://github.com/TheBoutrosLab/pipeline-generate-SQC-BAM/compare/v2.0.0...HEAD
